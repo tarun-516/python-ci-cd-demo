@@ -1,4 +1,4 @@
-
+```groovy
 pipeline {
     agent any
 
@@ -15,13 +15,13 @@ pipeline {
 
         stage('Compile') {
             steps {
-                bat 'python -m py_compile app.py test_app.py'
+                bat '"C:\\Users\\bhavy\\AppData\\Local\\Python\\bin\\python.exe" -m py_compile app.py test_app.py'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'python -m unittest -v test_app'
+                bat '"C:\\Users\\bhavy\\AppData\\Local\\Python\\bin\\python.exe" -m unittest -v test_app'
             }
         }
 
@@ -38,8 +38,10 @@ pipeline {
         success {
             echo 'Python CI/CD pipeline completed successfully!'
         }
+
         failure {
             echo 'Pipeline failed. Check the Console Output.'
         }
     }
 }
+```
