@@ -1,4 +1,3 @@
-```groovy
 pipeline {
     agent any
 
@@ -38,10 +37,8 @@ pipeline {
         success {
             echo 'Python CI/CD pipeline completed successfully!'
         }
-
         failure {
             echo 'Pipeline failed. Check the Console Output.'
         }
     }
 }
-```
